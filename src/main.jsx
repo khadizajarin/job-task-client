@@ -16,7 +16,6 @@ import PrivateRoute from './components/PrivateRoute';
 import Profile from './components/Dashboard/Profile';
 import CreateTask from './components/Dashboard/CreateTask';
 import TodoList from './components/Dashboard/TodoList';
-import OnGoing from './components/Dashboard/OnGoing';
 
 const router = createBrowserRouter([
   {
@@ -53,10 +52,6 @@ const router = createBrowserRouter([
       {
         path:'/dashboard/todo',
         element:<TodoList></TodoList>
-      },
-      {
-        path: '/dashboard/going',
-        element: <OnGoing></OnGoing>
       }
     ]
   }

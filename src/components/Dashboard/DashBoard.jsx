@@ -18,16 +18,7 @@ const DashBoard = () => {
                     <li>
                         <NavLink to="/dashboard/todo">
                         To-Do Task</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dashboard/going">
-                        On-going Task</NavLink>
-                    </li> 
-                    <li>
-                        <NavLink to="/dashboard/completed">
-                        Completed Task</NavLink>
-                    </li> 
-                    
+                    </li>    
                 </ul>
             </div>
             <div className="lg:flex-1">

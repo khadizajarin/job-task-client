@@ -19,27 +19,26 @@ const Profile = () => {
         })
     }
     return (
-        <div className="">
+        <div className="bg-amber-800 border border-amber-900 ">
+            <h2 className="text-4xl text-center font-bold p-4">About You:</h2>
 
-        <motion.div className="" style={{backgroundImage: 'url()'}} initial={{ x : 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
-            <h2 className="text-4xl text-center font-bold text-white">About You:</h2>
+        <motion.div className=" text-gray-900" style={{backgroundImage: 'url()'}} initial={{ x : 200, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
         
-            <div className="flex justify-center items-center h-screen">
-                <div className="card w-96 bg-base-100 shadow-xl">
-                    <figure className="px-10 pt-10">
-                    <img src={user.photoURL} alt="" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                    <h2 className="card-title">{user.displayName}</h2>
-                    <p>{user.email}</p>
-                    <div className="card-actions">
-                        <button className="btn glass" onClick={handleLogOut}>LogOut</button>
+            <div className="flex  lg:items-center h-full">
+
+            <div className="hero lg:min-h-screen bg-yellow-300">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <img src={user.photoURL} className="max-w-sm rounded-lg shadow-2xl" />
+                    <div>
+                    <h1 className="text-5xl font-bold">{user.displayName}</h1>
+                    <p className="py-6">{user.email}</p>
+                    <button className="btn glass" onClick={handleLogOut}>LogOut</button>
                     </div>
-                    </div>
+                </div>
                 </div>
             </div>
 
-        </motion.div>    
+        </motion.div>   
         </div>
     );
 };

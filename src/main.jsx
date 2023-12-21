@@ -47,11 +47,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/dashboard/create',
-        element:<CreateTask></CreateTask>
+        element:<PrivateRoute><CreateTask></CreateTask></PrivateRoute>
       },
       {
         path:'/dashboard/todo',
-        element:<TodoList></TodoList>
+        element:<PrivateRoute><TodoList></TodoList></PrivateRoute>
       }
     ]
   }

@@ -231,30 +231,27 @@ const TodoList = () => {
           
 
     return ( 
-        <div>
-
-<div>
-    
-
-    </div>
+        <div className="border border-amber-950">
             {/* todolist */}
            <div>
-            <h1 className="text-3xl font-bold text-center my-4">To-Do List</h1>
+            <h1 className="text-3xl font-bold text-center  bg-amber-800 p-4">To-Do List</h1>
             <div className="overflow-x-auto">
-                    <table className="table table-zebra">
-                        <thead>
-                        <tr>
+                    <table className="table ">
+                        <thead className="bg-yellow-300">
+                        <tr >
                             <th>Task Name</th>
                             <th>Task Description</th>
                             <th>Deadline</th>
                             <th>Priority</th>
                             <th>Action</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>
                             {
                                 todos.map((todo) => (
-                                    <tr key={todo._id}>
+                                    <tr className="bg-yellow-200" key={todo._id}>
                                         <td>{todo.title}</td>
                                         <td>{todo.description}</td>
                                         <td>{todo.deadline}</td>
@@ -271,22 +268,24 @@ const TodoList = () => {
 
             {/* ongoing list */}
             <div>
-            <h1 className="text-3xl font-bold text-center my-4">On-Going List</h1>
+            <h1 className="text-3xl font-bold text-center bg-amber-800 p-4">On-Going List</h1>
             <div className="overflow-x-auto">
-                <table className="table table-zebra">
-                    <thead>
+                <table className="table ">
+                    <thead className="bg-green-800">
                     <tr>
                         <th>Task Name</th>
                         <th>Task Description</th>
                         <th>Deadline</th>
                         <th>Priority</th>
                         <th>Action</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
                         {
                             goings.map((going) => (
-                                <tr key={going._id}>
+                                <tr className="bg-green-600" key={going._id}>
                                     <td>{going.title}</td>
                                     <td>{going.description}</td>
                                     <td>{going.deadline}</td>
@@ -303,22 +302,24 @@ const TodoList = () => {
 
             {/* Completed lists */}
             <div>
-            <h1 className="text-3xl font-bold text-center my-4">Completed</h1>
+            <h1 className="text-3xl font-bold text-center bg-amber-800 p-4">Completed</h1>
             <div className="overflow-x-auto">
-                <table className="table table-zebra">
-                    <thead>
+                <table className="table ">
+                    <thead className="bg-amber-700">
                     <tr>
                         <th>Task Name</th>
                         <th>Task Description</th>
                         <th>Deadline</th>
                         <th>Priority</th>
                         <th>Action</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
                         {
                             completed.map((complete) => (
-                                <tr key={complete._id}>
+                                <tr className="bg-amber-400" key={complete._id}>
                                     <td>{complete.title}</td>
                                     <td>{complete.description}</td>
                                     <td>{complete.deadline}</td>

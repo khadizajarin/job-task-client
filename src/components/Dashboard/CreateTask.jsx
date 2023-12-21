@@ -41,8 +41,8 @@ const CreateTask = () => {
    
     return (
         <div>
-            <h1 className="font-bold text-3xl text-center">Add your task to TO-DO List</h1>
-             <form className="justify-center items-center h-screen m-10" onSubmit={handleSubmit(onSubmit)}>
+            <h1 className="font-bold text-3xl text-center p-4 bg-amber-800">Add your task to TO-DO List</h1>
+             <form className="justify-center items-center h-full p-10 text-gray-900 bg-yellow-300" onSubmit={handleSubmit(onSubmit)}>
 
 {/* Task name */}
                 <div className="form-control w-full my-6">
@@ -54,7 +54,7 @@ const CreateTask = () => {
                         placeholder="Task Name"
                         {...register('Task_name', { required: true })}
                         required
-                        className="input input-bordered w-full" />
+                        className="bg-green-800 input input-bordered w-full" />
                 </div>
 {/* task description */}
                 <div className="form-control w-full my-6">
@@ -66,7 +66,7 @@ const CreateTask = () => {
                         placeholder="Task Description"
                         {...register('Task_description', { required: true })}
                         required
-                        className="input input-bordered w-full" />
+                        className="bg-green-800 input input-bordered w-full" />
                 </div>
 
 {/* task deadline */}
@@ -82,7 +82,7 @@ const CreateTask = () => {
                            required: true 
                         })}
                         required
-                        className="input input-bordered w-full" />
+                        className="bg-green-800 input input-bordered w-full" />
                 </div>
 
 {/* task priority */}
@@ -91,7 +91,7 @@ const CreateTask = () => {
                             <span className="label-text">Priority Level*</span>
                         </label>
                         <select defaultValue="default" {...register('priority', { required: true })}
-                            className="select select-bordered w-full">
+                            className="bg-green-800 select select-bordered w-full">
                             <option disabled value="default">Select Priority</option>
                             <option value="low">Low</option>
                             <option value="moderate">Moderate</option>
@@ -101,7 +101,7 @@ const CreateTask = () => {
 
 
 
-                <input type="submit" />
+                <input type="submit" className="btn glass" /> 
                 </form>
             
         </div>
